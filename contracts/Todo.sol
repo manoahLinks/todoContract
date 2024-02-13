@@ -18,4 +18,9 @@ contract TodoContract {
         return todos;
     }
 
+    // create todo function
+    function addNewTodo (string memory _title, string memory _description) external {
+        todos.push(Todo(_title, _description, false));
+    }
+
 }
