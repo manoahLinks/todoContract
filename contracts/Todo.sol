@@ -23,4 +23,13 @@ contract TodoContract {
         todos.push(Todo(_title, _description, false));
     }
 
+    // toggle isDone status
+    function toggleIsDoneStatus (uint _todoId) external {
+        if(todos[_todoId].isDone == false) {
+            todos[_todoId].isDone = true;
+        }else {
+            todos[_todoId].isDone = false;
+        }
+    } 
+
 }
