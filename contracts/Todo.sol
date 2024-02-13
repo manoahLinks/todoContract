@@ -13,6 +13,11 @@ contract TodoContract {
    // array of todos
     Todo[] todos;
 
+        // get all todos
+    function getTodo (uint _todoId) external view returns (Todo memory) {
+        return todos[_todoId];
+    }
+
     // get all todos
     function getAllTodos () external view returns (Todo[] memory) {
         return todos;
