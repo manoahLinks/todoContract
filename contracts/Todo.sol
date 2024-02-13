@@ -10,6 +10,12 @@ contract TodoContract {
         bool isDone;
     }
 
-   
+   // array of todos
+    Todo[] todos;
+
+    // get all todos
+    function getAllTodos () external view returns (Todo[] memory) {
+        return todos;
+    }
 
 }
