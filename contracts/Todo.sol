@@ -32,4 +32,10 @@ contract TodoContract {
         }
     } 
 
+    // delete a todo
+    function removeTodo (uint _todoId) external {
+       todos[_todoId] = todos[todos.length - 1 ];
+       todos.pop();
+    }
+
 }
